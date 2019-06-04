@@ -1,0 +1,23 @@
+{
+  "movie1": {
+    "title": "Inside Out",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThtIGjPZNMkEL0_7OKZRytBAZzMEbtIS_1AtBYHrT0DqkTzazlfg",
+    "mpaaRating": "PG",
+    "genre": "comedy",
+    "time": "95"
+  },
+  "movie2": {
+    "title": "A Star is Born",
+    "imageUrl": "https://cdn3.movieweb.com/i/movie/opHGDcnYSqLDHz2d7RpCmBFPETv90G/384:50/A-Star-Is-Born.jpg",
+    "mpaaRating": "R",
+    "genre": "drama",
+    "time": "136"
+  },
+  "movie3": {
+    "title": "Amityville Horror",
+    "imageUrl": "https://thewolfmancometh.files.wordpress.com/2011/03/amityville-horror-movie-poster-1979.jpg",
+    "mpaaRating": "R",
+    "genre": "horror",
+    "time": "118"
+  }
+}
