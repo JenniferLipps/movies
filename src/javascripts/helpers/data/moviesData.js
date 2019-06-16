@@ -18,4 +18,6 @@ const getMovies = () => new Promise((resolve, reject) => {
     .catch(err => reject(err));
 });
 
-export default { getMovies };
+const addNewMovie = movieObject => axios.post(`${firebaseUrl}/movies.json`, movieObject);
+
+export default { getMovies, addNewMovie };

@@ -1,6 +1,7 @@
 import firebase from 'firebase/app';
 import 'firebase/auth';
 import movies from '../../components/movies/movies';
+import addNewMovie from '../../components/movies/addNewMovie';
 
 const authDiv = document.getElementById('auth');
 const moviesDiv = document.getElementById('movies');
@@ -14,7 +15,8 @@ const checkLoginStatus = () => {
       moviesDiv.classList.remove('hide');
       logoutlink.classList.remove('hide');
       movieLink.classList.remove('hide');
-      movies.showAllMovies();
+      addNewMovie.addNewMovieFormBuilder(user.uid);
+      movies.showAllMovies(user.uid); // may pass data later
     } else {
       authDiv.classList.remove('hide');
       moviesDiv.classList.add('hide');

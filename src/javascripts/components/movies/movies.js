@@ -1,3 +1,4 @@
+// import firebase from 'firebase/app';
 import moviesData from '../../helpers/data/moviesData';
 import util from '../../helpers/util';
 
