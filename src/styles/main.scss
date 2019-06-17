@@ -7,3 +7,10 @@ body {
 .hide {
   display: none;
 }
+
+.all-movies {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}

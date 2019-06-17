@@ -5,6 +5,8 @@ import addNewMovie from '../../components/movies/addNewMovie';
 
 const authDiv = document.getElementById('auth');
 const moviesDiv = document.getElementById('movies');
+const formHeadingDiv = document.getElementById('form-heading');
+const addMovieDiv = document.getElementById('newMovieForm');
 const logoutlink = document.getElementById('nav-logout');
 const movieLink = document.getElementById('nav-movies');
 
@@ -13,6 +15,8 @@ const checkLoginStatus = () => {
     if (user) {
       authDiv.classList.add('hide');
       moviesDiv.classList.remove('hide');
+      formHeadingDiv.classList.remove('hide');
+      addMovieDiv.classList.remove('hide');
       logoutlink.classList.remove('hide');
       movieLink.classList.remove('hide');
       addNewMovie.addNewMovieFormBuilder(user.uid);
@@ -20,6 +24,8 @@ const checkLoginStatus = () => {
     } else {
       authDiv.classList.remove('hide');
       moviesDiv.classList.add('hide');
+      formHeadingDiv.classList.add('hide');
+      addMovieDiv.classList.add('hide');
       logoutlink.classList.add('hide');
       movieLink.classList.add('hide');
     }
