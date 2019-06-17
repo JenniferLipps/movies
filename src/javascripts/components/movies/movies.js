@@ -4,6 +4,16 @@
 import moviesData from '../../helpers/data/moviesData';
 import util from '../../helpers/util';
 
+const myMovieList = [];
+
+const addMovieToMyList = (uid) => {
+  
+};
+
+const movieListEvents = (e) => {
+  e.target.id('myMovieListBtn').addEventListener('click', addMovieToMyList);
+};
+
 const displayMovies = (movies) => {
   let domString = '';
   movies.forEach((movie) => {

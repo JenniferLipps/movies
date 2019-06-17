@@ -1,3 +1,5 @@
+import movies from "../movies/movies";
+
 // import Axios from "axios";
 
 // // on navbar click, "movies" div is hidden and "myMoviesList" is unhidden
@@ -10,7 +12,11 @@
 
 // // cards displaying in list shoud have Rate button and stars
 
+// how to store the movie entry with the uid?
 
-// const getMyMovies = uid => new Promise((resolve, reject) => {
-//   axios.get()
-// });
+
+const getMyMovies = uid => new Promise((resolve, reject) => {
+  axios.get(`${firebaseUrl}/movies.json?orderBy="id"&equalTo="${id}"`)
+    .then((results) => {});
+    .catch();
+});
