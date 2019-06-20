@@ -1,4 +1,4 @@
-import movies from "../movies/movies";
+// import movies from "../movies/movies";
 
 // import Axios from "axios";
 
@@ -14,9 +14,9 @@ import movies from "../movies/movies";
 
 // how to store the movie entry with the uid?
 
+const addMovieToMyList = (uid) => {
+};
 
-const getMyMovies = uid => new Promise((resolve, reject) => {
-  axios.get(`${firebaseUrl}/movies.json?orderBy="id"&equalTo="${id}"`)
-    .then((results) => {});
-    .catch();
-});
+const movieListEvents = (e) => {
+  e.target.id('myMovieListBtn').addEventListener('click', addMovieToMyList);
+};

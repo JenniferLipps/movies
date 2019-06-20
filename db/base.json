@@ -1,5 +1,9 @@
 {
   "movies": "example",
   "users": "example",
-  "movieList": "example"
+  "movieList": "example",
+  "userMovieRating": "example",
+  "moviePeople": "example",
+  "movieRoles": "example",
+  "moviePeopleRoles": "example"
 }
