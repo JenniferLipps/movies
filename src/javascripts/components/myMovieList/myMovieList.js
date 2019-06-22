@@ -1,22 +1,44 @@
-// import movies from "../movies/movies";
+import myMovieList from '../../helpers/data/myMovieListData';
+import getMovies from '../../helpers/data/moviesData';
+import util from '../../helpers/util';
 
-// import Axios from "axios";
-
-// // on navbar click, "movies" div is hidden and "myMoviesList" is unhidden
-
-// // event listener that on click add class of hide to div id movies
-// // on click to "movies" hides "myMoviesList"
-
-// // myMovieListBtn click gets movie by id and adds to a new array based on uid
-// // myMovieArray displays in the same way as displayMovies
-
-// // cards displaying in list shoud have Rate button and stars
-
-// how to store the movie entry with the uid?
-
-const addMovieToMyList = (uid) => {
+const printMyMovies = (userMovies) => {
+  let domString = '';
+  userMovies.forEach((movie) => {
+    domString += '<div class="card col-3">';
+    domString += `<h4 class="card-title">${movie.title}</h4>`;
+    domString += `<img src=${movie.imageUrl}>`;
+    domString += `<div>Genre: ${movie.genre}</div>`;
+    domString += `<div>MPAA rating: ${movie.mpaaRating}</div>`;
+    domString += `<div>Run time: ${movie.time} minutes</div>`;
+    domString += '</div>';
+  });
+  util.printToDom('userMovieList', domString);
 };
 
-const movieListEvents = (e) => {
-  e.target.id('myMovieListBtn').addEventListener('click', addMovieToMyList);
+const displayMyMovies = (uid) => {
+  myMovieList.getMyMovies(uid)
+    .then((myMoviesList) => {
+      console.error(myMoviesList);
+      getMovies.getMovies()
+        .then((movies) => {
+          const smashedMovies = movies.map((movie) => {
+            const m = movie;
+            const userMovie = myMoviesList.find(userMovieItem => movie.id === userMovieItem.movieId); // eslint-disable-line
+            if (userMovie) {
+              m.movieListId = userMovie.id;
+              m.movieIsWatched = userMovie.isWatched;
+              m.movieRate = userMovie.rateValue;
+            }
+            return m;
+          });
+          const userMovies = smashedMovies.filter(movie => movie.movieListId);
+          console.error(userMovies);
+          printMyMovies(userMovies);
+        })
+        .catch();
+    })
+    .catch();
 };
+
+export default { displayMyMovies };

@@ -13,7 +13,6 @@ const getMovies = () => new Promise((resolve, reject) => {
         moviesArray.push(movieResults[movieId]);
       });
       resolve(moviesArray);
-      console.error(moviesArray);
     })
     .catch(err => reject(err));
 });

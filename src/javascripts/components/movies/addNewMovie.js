@@ -12,7 +12,6 @@ const inputValuesCollected = (e) => {
     genre: document.getElementById('movieGenreInput').value,
     time: document.getElementById('movieTimeInput').value,
   };
-  console.error(newMovie);
   addMovie.addNewMovie(newMovie)
     .then(() => {
       showMovies.showAllMovies();

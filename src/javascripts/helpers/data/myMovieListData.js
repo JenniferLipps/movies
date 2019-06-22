@@ -4,7 +4,7 @@ import apiKeys from './apiKeys.json';
 const firebaseUrl = apiKeys.firebaseKeys.databaseURL;
 
 const getMyMovies = uid => new Promise((resolve, reject) => {
-  axios.get(`${firebaseUrl}/movieList.json?orderBy="id"&equalTo="${uid}"`)
+  axios.get(`${firebaseUrl}/movieList.json?orderBy="uid"&equalTo="${uid}"`)
     .then((results) => {
       const movieListResults = results.data;
       const myMoviesList = [];
@@ -12,6 +12,7 @@ const getMyMovies = uid => new Promise((resolve, reject) => {
         movieListResults[listMovieId].id = listMovieId;
         myMoviesList.push(movieListResults[listMovieId]);
       });
+      console.error(movieListResults);
       resolve(myMoviesList);
     })
     .catch(err => reject(err));

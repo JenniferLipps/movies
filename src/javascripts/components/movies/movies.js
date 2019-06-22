@@ -1,7 +1,8 @@
-// import firebase from 'firebase/app';
+import firebase from 'firebase/app';
 // import 'bootstrap';
 // import './movies.scss';
 import moviesData from '../../helpers/data/moviesData';
+import myMoviesList from '../myMovieList/myMovieList';
 import util from '../../helpers/util';
 
 const displayMovies = (movies) => {
@@ -20,6 +21,7 @@ const displayMovies = (movies) => {
 };
 
 const showAllMovies = () => {
+  myMoviesList.displayMyMovies(firebase.auth().currentUser.uid);
   moviesData.getMovies()
     .then((movies) => {
       displayMovies(movies);
