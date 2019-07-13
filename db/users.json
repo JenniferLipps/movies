@@ -4,7 +4,11 @@
     "uid": "1234"
   },
   "user2": {
-    "name": "First User",
+    "name": "Second User",
     "uid": "5678"
+  },
+  "user3": {
+    "name": "Jen Lipps",
+    "uid": "zhyz6hUmjcTXs5zz591nU6mB6kx1"
   }
 }

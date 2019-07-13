@@ -1,0 +1,20 @@
+{
+  "userMovie1": {
+    "uid": "1234",
+    "movieId": "movie1",
+    "isWatched": false,
+    "rateValue": 5
+  },
+  "userMovie2": {
+    "uid": "567",
+    "movieId": "movie2",
+    "isWatched": false,
+    "rateValue": 5
+  },
+  "userMovie3": {
+    "uid": "zhyz6hUmjcTXs5zz591nU6mB6kx1",
+    "movieId": "movie2",
+    "isWatched": false,
+    "rateValue": 5
+  }
+}

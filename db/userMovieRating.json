@@ -1,0 +1,17 @@
+{
+  "userRating1": {
+    "uid": "1234",
+    "movieId": "movie1",
+    "rateValue": 5
+  },
+  "userRating2": {
+    "uid": "5678",
+    "movieId": "movie2",
+    "rateValue": 5
+  },
+  "userRating3": {
+    "uid": "zhyz6hUmjcTXs5zz591nU6mB6kx1",
+    "movieId": "movie3",
+    "rateValue": 5
+  }
+}

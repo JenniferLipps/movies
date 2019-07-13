@@ -7,10 +7,13 @@ const navBarEvents = () => {
     navBarLinks[i].addEventListener('click', (e) => {
       if (e.target.parentNode.id === 'nav-logout') {
         firebase.auth().signOut();
-        console.error('logged out');
       }
     });
   }
 };
+
+// const showWatchList = () => {
+//   const
+// };
 
 export default { navBarEvents };
