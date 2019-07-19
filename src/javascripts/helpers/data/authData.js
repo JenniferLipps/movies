@@ -8,7 +8,7 @@ const moviesDiv = document.getElementById('movies');
 const formHeadingDiv = document.getElementById('form-heading');
 const addMovieDiv = document.getElementById('newMovieForm');
 const logoutlink = document.getElementById('nav-logout');
-const movieLink = document.getElementById('nav-movies');
+const movieLink = document.getElementById('nav-my-movies');
 
 const checkLoginStatus = () => {
   firebase.auth().onAuthStateChanged((user) => {
