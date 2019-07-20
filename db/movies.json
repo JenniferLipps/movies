@@ -8,7 +8,7 @@
   },
   "movie2": {
     "title": "A Star is Born",
-    "imageUrl": "https://cdn3.movieweb.com/i/movie/opHGDcnYSqLDHz2d7RpCmBFPETv90G/384:50/A-Star-Is-Born.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/3/39/A_Star_is_Born.png/220px-A_Star_is_Born.png",
     "mpaaRating": "R",
     "genre": "drama",
     "time": "136"
@@ -19,5 +19,26 @@
     "mpaaRating": "R",
     "genre": "horror",
     "time": "118"
+  },
+  "movie4": {
+    "title": "Black Swan",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/6/68/Black_Swan_poster.jpg",
+    "mpaaRating": "R",
+    "genre": "horror",
+    "time": "108"
+  },
+  "movie5": {
+    "title": "Fight Club",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/f/fc/Fight_Club_poster.jpg",
+    "mpaaRating": "R",
+    "genre": "drama",
+    "time": "139"
+  },
+  "movie6": {
+    "title": "Anchorman",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/6/64/Movie_poster_Anchorman_The_Legend_of_Ron_Burgundy.jpg",
+    "mpaaRating": "PG-13",
+    "genre": "comedy",
+    "time": "94"
   }
 }
